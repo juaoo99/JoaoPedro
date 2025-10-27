@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
+import VariableProximity from '../../components/VariableProximity.vue';
+
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 import loginImage from '../../assets/images/login.png';
 import menuImage from '../../assets/images/menu.png';
 import menu2Image from '../../assets/images/menu2.png';
 import serveImage from '../../assets/images/serve.png';
-// Defina as opções responsivas do carrossel
+const containerRef = ref<HTMLElement | null>(null);
+
 const responsiveOptions = ref([
     {
         breakpoint: '1500px',
@@ -52,7 +55,15 @@ const products = ref([
             </div>
 
             <div class="items-center lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-semibold text-4xl text-pretty mt-5">GuestLink</p>
+                <VariableProximity
+                    label="GuestLink"
+                    from-font-variation-settings="'wght' 400, 'opsz' 9"
+                    to-font-variation-settings="'wght' 1000, 'opsz' 40"
+                    :container-ref="containerRef"
+                    :radius="100"
+                    falloff="linear"
+                    class-name="font-semibold text-4xl text-pretty mt-5"
+                />
                 <p class="font-light text-lg text-pretty mt-5">
                     Participei do desenvolvimento do Guestlink, um softphone de alta performance projetado para transformar a comunicação em hotéis. Utilizando uma base de código robusta em Swift, SwiftUI e Objective-C, criei um aplicativo que vai
                     além de um simples ramal de telefone. O Guestlink permite que os hóspedes realizem e recebam chamadas diretamente do seu smartphone, enquanto oferece um sistema de chat integrado para comunicação direta com a equipe do hotel. Além

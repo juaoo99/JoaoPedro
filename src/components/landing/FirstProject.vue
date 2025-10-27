@@ -1,4 +1,6 @@
-<script setup>
+<script setup lang="ts">
+import VariableProximity from '../../components/VariableProximity.vue';
+
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 
@@ -7,8 +9,8 @@ import call2 from '../../assets/images/call2.png';
 import key from '../../assets/images/keypad.png';
 import op from '../../assets/images/options.png';
 import reg from '../../assets/images/reg.png';
+const containerRef = ref<HTMLElement | null>(null);
 
-// Defina as opções responsivas do carrossel
 const responsiveOptions = ref([
     {
         breakpoint: '1500px',
@@ -66,7 +68,15 @@ const products = ref([
                 </Carousel>
             </div>
             <div class="items-center lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-semibold text-4xl text-pretty mt-5">Softphone Withe-label</p>
+                <VariableProximity
+                    label="Softphone Withe-label"
+                    from-font-variation-settings="'wght' 400, 'opsz' 9"
+                    to-font-variation-settings="'wght' 1000, 'opsz' 40"
+                    :container-ref="containerRef"
+                    :radius="100"
+                    falloff="linear"
+                    class-name="font-semibold text-4xl text-pretty mt-5"
+                />
                 <p class="font-light text-lg lg:text-pretty mt-5">
                     Responsável pelo desenvolvimento e manutenção de um softphone VoIP whitelabel, uma plataforma que serve a mais de 70 clientes distintos. Para construir um sistema de alta performance, implementei tecnologias modernas como Firebase
                     para uma gestão de dados eficiente e notificações push para aprimorar a experiência de comunicação. Essa arquitetura permitiu que as personalizações de cada cliente fossem feitas de maneira dinâmica, enquanto as atualizações de

@@ -1,28 +1,37 @@
-<script setup>
+<script setup lang="ts">
+import VariableProximity from '../../components/VariableProximity.vue';
+
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 
-import alert from '../../assets/images/guestweb/alert.png';
-import chat from '../../assets/images/guestweb/chat.png';
+import account from '../../assets/images/guestweb/account.png';
+import category from '../../assets/images/guestweb/category.png';
+import dash from '../../assets/images/guestweb/dash.png';
+import food from '../../assets/images/guestweb/food.png';
 import home from '../../assets/images/guestweb/home.png';
-import order from '../../assets/images/guestweb/order.png';
 import ramal from '../../assets/images/guestweb/ramal.png';
+
+const containerRef = ref<HTMLElement | null>(null);
 
 const products = ref([
     {
         image: home
     },
     {
-        image: chat
+        image: account
     },
     {
-        image: alert
+        image: dash
     },
-    {
-        image: order
-    },
+
     {
         image: ramal
+    },
+    {
+        image: food
+    },
+    {
+        image: category
     }
 ]);
 
@@ -40,10 +49,18 @@ const responsiveOptions = ref([
 ]);
 </script>
 <template>
-    <div class="lg:px-20 px-10">
+    <div class="lg:px-40 px-10">
         <div class="w-full">
             <div class="items-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-semibold text-4xl text-pretty">GuestLink Management</p>
+                <VariableProximity
+                    label="GuestLink Management"
+                    from-font-variation-settings="'wght' 400, 'opsz' 9"
+                    to-font-variation-settings="'wght' 1000, 'opsz' 40"
+                    :container-ref="containerRef"
+                    :radius="100"
+                    falloff="linear"
+                    class-name="font-semibold text-4xl text-pretty mt-5"
+                />
                 <p class="font-light text-lg text-pretty mt-5">
                     Complementando o aplicativo para iOS do Guestlink, desenvolvi um portal de gerenciamento web para a equipe do hotel. Essa plataforma é a central de operações que otimiza a comunicação e os serviços. Através dela, os funcionários
                     podem monitorar e responder ao chat dos hóspedes, gerenciar pedidos de serviço de forma organizada e configurar os ramais de forma simples e eficaz. O portal web, portanto, não apenas complementa o aplicativo, mas transforma a

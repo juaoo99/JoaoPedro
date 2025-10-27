@@ -1,14 +1,13 @@
+import '@/assets/styles.scss';
 import Aura from '@primeuix/themes/aura';
+import { getAnalytics } from 'firebase/analytics';
+import { initializeApp } from 'firebase/app';
 import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-
-import '@/assets/styles.scss';
-import { getAnalytics } from 'firebase/analytics';
-import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -24,6 +23,8 @@ const analytics = getAnalytics(firebaseApp);
 
 const app = createApp(App);
 app.config.globalProperties.$analytics = analytics;
+
+document.body.classList.add('app-dark');
 
 app.use(router);
 app.use(PrimeVue, {

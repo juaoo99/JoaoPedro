@@ -1,4 +1,7 @@
-<script setup>
+<script setup lang="ts">
+import GlassSurface from '../../components/GlassSurface.vue';
+import ShinyText from '../../components/ShinyText.vue';
+import TextType from '../../components/TextType .vue';
 function smoothScroll(id) {
     document.body.click();
     const element = document.getElementById(id);
@@ -11,8 +14,37 @@ function smoothScroll(id) {
 }
 </script>
 <template>
-    <div class="flex flex-col lg:flex-row w-full min-h-dvh lg:items-center lg:justify-around gap-5 mt-20">
+    <div class="hidden lg:flex flex-col lg:flex-row w-full min-h-dvh lg:items-center lg:justify-around gap-5 mt-20 !bg-transparent">
         <div class="w-full text-center lg:w-1/2 lg:text-left" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-2000' }">
+            <TextType style="font-size: 6rem; color: surface" :text="['hi, i am Joao Pedro', 'happy to see you here!']" :typingSpeed="75" :pauseDuration="2000" :showCursor="true" cursorCharacter="|" />
+            <ShinyText
+                text=" Sou desenvolvedor formado e com experiência tem aplicações mobile e web. Buscando oportunidades desafiadoras para aplicar minhas skills em programação e desenvolvimento de aplicações de alta performance!"
+                :disabled="false"
+                :speed="3"
+                style="font-size: 1.4rem"
+                class-name="your-custom-class"
+            />
+
+            <div class="flex flex-wrap justify-center lg:justify-start gap-2 mt-6 px-5 lg:px-0">
+                <GlassSurface :width="150" :height="50" :border-radius="24" style="custom-style">
+                    <p class="t select-none"><a @click="smoothScroll('connect')">Contact Me</a></p>
+                </GlassSurface>
+                <GlassSurface :width="50" :height="50" :border-radius="24" style="custom-style">
+                    <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-silva-santos-4b234a1b1/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem; color: #0966c2"></i></a>
+                </GlassSurface>
+
+                <!--<div class="lg:flex lg:items-center gap-2 p-3" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+                    <a href="https://github.com/juaoo99" target="_blank"><i class="pi pi-github" style="font-size: 2.2rem"></i></a>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="flex items-center p-5 lg:p-0" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000' }">
+            <img src="../../assets/images/more/p2.png" alt="Image" width="400" class="rounded-xl" />
+        </div>
+    </div>
+    <div class="flex lg:hidden flex-col w-full min-h-dvh gap-5 mt-20">
+        <div class="text-center w-1/3" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-2000' }">
             <p class="text-7xl font-bold">hi, i am <br />João Pedro.</p>
             <p class="font-light text-lg text-pretty mt-5 px-5 lg:px-0">
                 Sou desenvolvedor formado e com experiência tem aplicações mobile e web. Buscando oportunidades desafiadoras para aplicar minhas skills em programação e desenvolvimento de aplicações de alta performance.
