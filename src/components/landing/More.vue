@@ -2,6 +2,7 @@
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 // Importe todas as imagens
+import habit from '../../assets/images/more/45.png';
 import brands from '../../assets/images/more/brands.jpeg';
 import google from '../../assets/images/more/gemini.jpeg';
 import office from '../../assets/images/more/office.jpeg';
@@ -25,13 +26,19 @@ const products = ref([
         image: brands,
         title: 'Gramado Summit',
         subtitle:
-            'Minha participação no Gramado Summit, o maior polo de brainstorming da América Latina, foi uma experiência de aprendizado e visibilidade profissional. Neste evento, tive a chance de atuar como expositor, apresentando duas aplicações cruciais do meu portfólio: o Softphone Whitelabel e o GuestLink.'
+            'Minha participação no Gramado Summit, o maior polo de brainstorming da América Latina, foi uma experiência de aprendizado e visibilidade profissional. Neste evento, tive a chance de atuar como expositor, apresentando duas aplicações cruciais do meu portfólio: o Softphone Whitelabel e o GuestLink                                                       .'
     },
     {
         image: totem2,
         title: 'Gramado Summit',
         subtitle:
             'Participar do evento como expositor me permitiu não apenas mostrar o valor técnico dos meus projetos, mas também trocar conhecimentos e fazer networking com líderes da indústria, empreendedores e investidores. Foi uma oportunidade de validação do meu trabalho, que me inspirou a continuar inovando e buscando soluções que façam a diferença no mercado.'
+    },
+    {
+        image: habit,
+        title: 'App para criacão de hábitos',
+        subtitle:
+            'Desenvolvi um aplicatico focado em ajudar os usuários a criar e manter hábitos saudáveis. O app permite que os usuários definam metas diárias, acompanhem seu progresso e recebam lembretes personalizados para incentivar a consistência. Com uma interface intuitiva e recursos motivacionais, o aplicativo visa transformar pequenas ações diárias em hábitos duradouros, promovendo o bem-estar e a produtividade.'
     },
     {
         image: office,
@@ -59,7 +66,7 @@ const products = ref([
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="lg:m-2 lg:p-4 lg:flex items-center justify-center gap-8">
-                            <div class="mb-4">
+                            <div class="">
                                 <div class="relative mx-auto">
                                     <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-auto max-w-xs mx-auto rounded-lg" />
                                 </div>
