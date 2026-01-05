@@ -37,7 +37,7 @@ const products = ref([
 ]);
 </script>
 <template>
-    <div class="lg:px-20 px-10 gap-20 min-h-dvh">
+    <div class="lg:px-40 px-10 gap-20 min-h-dvh">
         <div class="lg:flex w-full lg:items-center lg:justify-around gap-20 mt-10">
             <div class="imga w-full lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <p class="font-light text-xl text-pretty text-center lg:text-left">GuestLink</p>

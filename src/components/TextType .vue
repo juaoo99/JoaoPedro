@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
         <span class="inline" :style="{ color: getCurrentTextColor() }">
             {{ displayedText }}
         </span>
-        <span v-if="showCursor" ref="cursorRef" :class="`ml-1 inline-block opacity-100 ${hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting) ? 'hidden' : ''} ${cursorClassName}`">
+        <span v-if="showCursor" ref="cursorRef" :class="`inline-block opacity-100 ${hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting) ? 'hidden' : ''} ${cursorClassName}`">
             {{ cursorCharacter }}
         </span>
     </component>

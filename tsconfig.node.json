@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "isolatedModules": true,
-    "types": ["node"]
-  },
-  "include": ["vite.config.mjs"] // <-- ALTERE DE "vite.config.ts" PARA "vite.config.mjs"
+    "compilerOptions": {
+        "composite": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "isolatedModules": true,
+        "types": ["node"]
+    },
+    "include": ["vite.config.mjs"] // <-- ALTERE DE "vite.config.ts" PARA "vite.config.mjs"
 }

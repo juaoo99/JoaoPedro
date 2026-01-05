@@ -43,7 +43,7 @@ const products = ref([
 ]);
 </script>
 <template>
-    <div class="lg:px-20 px-10 gap-20 min-h-dvh">
+    <div class="lg:px-40 px-10 gap-20 min-h-dvh">
         <div class="items-center 2 mb-40 justify-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
             <span class="text-4xl font-bold uppercase text-center">Projects</span>
             <p class="font-light text-lg text-pretty mt-5">

@@ -119,8 +119,6 @@ const initializeLetterElements = () => {
 
     const elements = rootRef.value.querySelectorAll('.letter');
     letterElements.value = Array.from(elements) as HTMLElement[];
-
-    console.log(`Found ${letterElements.value.length} letter elements`);
 };
 
 const handleMouseMove = (ev: MouseEvent) => {

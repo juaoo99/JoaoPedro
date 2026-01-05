@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
     margin: 1.5rem 0 1rem 0;
-    font-family: "Merriweather", serif;
+    font-family: 'Merriweather', serif;
     font-optical-sizing: auto;
     font-weight: 700;
     line-height: 1.5;
@@ -62,18 +62,18 @@ hr {
 p {
     margin: 0 0 1rem 0;
     line-height: 1.5;
- font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
+    font-family: 'Merriweather', serif;
+    font-optical-sizing: auto;
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 a {
-     font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
+    font-family: 'Merriweather', serif;
+    font-optical-sizing: auto;
 }
- span{
-     font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
- }
+span {
+    font-family: 'Merriweather', serif;
+    font-optical-sizing: auto;
+}

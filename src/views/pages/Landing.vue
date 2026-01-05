@@ -13,9 +13,9 @@ import StaggeredMenu from '../../layout/StaggeredMenu.vue';
 
 const isMobileMenuOpen = ref(false);
 
-const toggleMenu = () => {
+/*const toggleMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value;
-};
+};*/
 
 const handleMenuOpen = () => {
     isMobileMenuOpen.value = true;
@@ -49,7 +49,7 @@ function smoothScroll(id) {
 
 <template>
     <div style="width: 100%; height: 600px; position: relative" class="mx-0 p-0">
-        <div id="home" class="landing-wrapper overflow-hidden absolute">
+        <div id="home" class="landing-wrapper lg:overflow-hidden lg:absolute">
             <div
                 :class="{
                     'pointer-events-auto': isMobileMenuOpen,
@@ -73,7 +73,7 @@ function smoothScroll(id) {
                     @menu-close="handleMenuClose"
                 />
             </div>
-            <div style="width: 100%; height: 100dvh" class="relative flex justify-center items-center">
+            <div style="width: 100%; height: 100dvh" class="lg:relative flex justify-center items-center">
                 <DotGrid
                     :dot-size="3"
                     :gap="15"
