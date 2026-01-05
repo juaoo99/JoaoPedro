@@ -71,9 +71,23 @@ const products = ref([
                 </p>
                 <div class="lg:flex gap-5">
                     <p class="font-light text-lg text-pretty uppercase">Avaliable on:</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://apps.apple.com/us/app/ch%C3%A1cara-menina-da-serra/id6751280484" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">App Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase">
+                        <a
+                            href="https://apps.apple.com/us/app/ch%C3%A1cara-menina-da-serra/id6751280484"
+                            target="_blank"
+                            class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                            >App Store</a
+                        >
+                    </p>
                     <p class="font-light text-lg text-pretty">&</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=br.app.amax.meninadaserra" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">Play Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=br.app.amax.meninadaserra"
+                            target="_blank"
+                            class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                            >Play Store</a
+                        >
+                    </p>
                 </div>
                 <p class="font-light text-lg text-pretty mt-5 uppercase">Project Info</p>
                 <Divider />

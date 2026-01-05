@@ -48,8 +48,17 @@ const products = ref([
             <span class="text-4xl font-bold uppercase text-center">Projects</span>
             <p class="font-light text-lg text-pretty mt-5">
                 Alguns dos principais projetos em que trabalhei e ainda trabalho hoje são comercializados, o sofpthone whitelabel pode ser baixado na
-                <a href="https://play.google.com/store/apps/dev?id=5756200202892972493" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl">Play Store</a> e
-                <a href="https://apps.apple.com/us/developer/amax-software-house-ltda/id1693262417" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl">App Store</a>. Check my work.
+                <a href="https://play.google.com/store/apps/dev?id=5756200202892972493" target="_blank" class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                    >Play Store</a
+                >
+                e
+                <a
+                    href="https://apps.apple.com/us/developer/amax-software-house-ltda/id1693262417"
+                    target="_blank"
+                    class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                >
+                    App Store </a
+                >. Check my work.
             </p>
         </div>
         <div class="lg:flex w-full lg:items-center lg:justify-around gap-20 mt-10">
@@ -85,9 +94,20 @@ const products = ref([
                 </p>
                 <div class="lg:flex gap-5">
                     <p class="font-light text-lg text-pretty">Avaliable on:</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://apps.apple.com/us/app/fluxphone/id6450217761" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">App Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase">
+                        <a href="https://apps.apple.com/us/app/fluxphone/id6450217761" target="_blank" class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                            >App Store</a
+                        >
+                    </p>
                     <p class="font-light text-lg text-pretty">&</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=br.net.flux.fluxphone_beta" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">Play Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase">
+                        <a
+                            href="https://play.google.com/store/apps/details?id=br.net.flux.fluxphone_beta"
+                            target="_blank"
+                            class="bg-[#d3e97a67] p-3 rounded-full transition-all duration-300 hover:bg-[#d3e97ad7] hover:shadow-[0_0_20px_#d3e97a] hover:scale-105"
+                            >Play Store</a
+                        >
+                    </p>
                 </div>
                 <p class="font-semibold text-lg text-pretty mt-5 uppercase">Project Info</p>
                 <Divider />

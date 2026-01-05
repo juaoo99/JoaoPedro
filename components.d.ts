@@ -17,6 +17,7 @@ declare module 'vue' {
     FirstSection: typeof import('./src/components/landing/FirstSection.vue')['default']
     FloatingConfigurator: typeof import('./src/components/FloatingConfigurator.vue')['default']
     GlassSurface: typeof import('./src/components/GlassSurface.vue')['default']
+    GradientText: typeof import('./src/components/GradientText.vue')['default']
     Magnet: typeof import('./src/components/Magnet.vue')['default']
     More: typeof import('./src/components/landing/More.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
