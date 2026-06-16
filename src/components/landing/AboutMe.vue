@@ -3,7 +3,7 @@
         <div class="items-center lg:w-1/3 justify-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
             <span class="text-7xl font-bold mb-5">about me</span>
             <div class="w-full flex item-center pt-10" style="width: 300px">
-                <img src="../../assets/images/aboutme.png" alt="" class="rounded-lg" />
+                <img src="../../assets/images/s.jpeg" alt="" class="rounded-lg" />
             </div>
         </div>
         <div class="items-center lg:w-1/2">

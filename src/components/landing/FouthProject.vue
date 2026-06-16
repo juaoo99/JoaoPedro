@@ -3,10 +3,13 @@ import VariableProximity from '../../components/VariableProximity.vue';
 
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
-import loginImage from '../../assets/images/login.png';
-import menuImage from '../../assets/images/menu.png';
-import menu2Image from '../../assets/images/menu2.png';
-import serveImage from '../../assets/images/serve.png';
+import account from '../../assets/images/bshop/account.png';
+import config from '../../assets/images/bshop/config.png';
+import loginImage from '../../assets/images/bshop/login.png';
+import menuImage from '../../assets/images/bshop/main.png';
+import nfc from '../../assets/images/bshop/nfc.png';
+import pay from '../../assets/images/bshop/pay.png';
+
 const containerRef = ref<HTMLElement | null>(null);
 
 const responsiveOptions = ref([
@@ -29,18 +32,24 @@ const products = ref([
         image: menuImage
     },
     {
-        image: menu2Image
+        image: config
     },
     {
-        image: serveImage
+        image: pay
+    },
+    {
+        image: nfc
+    },
+    {
+        image: account
     }
 ]);
 </script>
 <template>
     <div class="lg:px-20 px-10 gap-20 min-h-dvh">
-        <div class="lg:flex w-full lg:items-center lg:justify-around gap-20">
-            <div class="imga w-full lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-light text-xl text-pretty text-center lg:text-left">GuestLink</p>
+        <div class="lg:flex w-full lg:items-center lg:justify-around gap-20 mt-10">
+            <div class="imga p-10 w-full lg:w-1/2 rounded-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+                <p class="font-light text-xl text-pretty text-center lg:text-left">BShop Mobile</p>
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="rounded m-2 p-4">
@@ -56,7 +65,7 @@ const products = ref([
 
             <div class="items-center lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <VariableProximity
-                    label="GuestLink"
+                    label="BShop Mobile"
                     from-font-variation-settings="'wght' 400, 'opsz' 9"
                     to-font-variation-settings="'wght' 1000, 'opsz' 40"
                     :container-ref="containerRef"
@@ -65,21 +74,19 @@ const products = ref([
                     class-name="font-semibold text-4xl text-pretty mt-5"
                 />
                 <p class="font-light text-lg text-pretty mt-5">
-                    Participei do desenvolvimento do Guestlink, um softphone de alta performance projetado para transformar a comunicação em hotéis. Utilizando uma base de código robusta em Swift, SwiftUI e Objective-C, criei um aplicativo que vai
-                    além de um simples ramal de telefone. O Guestlink permite que os hóspedes realizem e recebam chamadas diretamente do seu smartphone, enquanto oferece um sistema de chat integrado para comunicação direta com a equipe do hotel. Além
-                    disso, o aplicativo conta com um módulo de pedidos que agiliza o serviço de quarto e outras solicitações, centralizando toda a interação do cliente em uma única e intuitiva interface.
+                   O BShop Mobile é um ecossistema robusto de Ponto de Venda (PDV) e softphone focado no setor varejista e de automação comercial. A plataforma unifica serviços de telecomunicação e soluções financeiras, otimizando a operação e o fluxo de vendas diretamente em smartphones comuns e terminais dedicados (Smart POS). O sistema foi projetado com arquitetura escalável utilizando múltiplos build variants (flavors) para gerenciar com segurança uma carteira de clientes ativos.
+                   <br />
+                   Como Desenvolvedor Android na Server Informática, atuei diretamente em todo o ciclo de vida do aplicativo, com foco em otimização de código e integração de hardware. Meu principal marco no projeto foi liderar de ponta a ponta a integração do SDK 'Tap on Phone' do PagBank.
                 </p>
                 <div class="lg:flex gap-5">
                     <p class="font-light text-lg text-pretty uppercase">Avaliable on:</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://apps.apple.com/us/app/ch%C3%A1cara-menina-da-serra/id6751280484" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">App Store</a></p>
-                    <p class="font-light text-lg text-pretty">&</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=br.app.amax.meninadaserra" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">Play Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=com.serverinfo.bshoppdv.playstore&hl=pt" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">Play Store</a></p>
                 </div>
                 <p class="font-light text-lg text-pretty mt-5 uppercase">Project Info</p>
                 <Divider />
                 <div class="lg:flex justify-between">
                     <p class="font-light text-lg text-pretty mt-5">Year</p>
-                    <p class="font-light text-lg text-pretty mt-5">2024 - 2025</p>
+                    <p class="font-light text-lg text-pretty mt-5">2026</p>
                 </div>
                 <Divider />
                 <div class="lg:flex justify-between">
@@ -89,7 +96,8 @@ const products = ref([
                 <Divider />
                 <div class="lg:flex justify-between">
                     <p class="font-light text-lg text-pretty mt-5">Langagues/Frameworks</p>
-                    <p class="font-light text-lg text-pretty mt-5 flex items-center gap-5">Obj-C <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Swift <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> SwiftUI</p>
+                    <p class="font-light text-lg text-pretty mt-5 flex items-center gap-5">Kotlin<i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Java 
+                    </p>
                 </div>
                 <Divider />
             </div>
@@ -99,8 +107,6 @@ const products = ref([
 
 <style scoped>
 .imga {
-    padding: 20px;
     background-color: rgba(128, 128, 128, 0.111);
-    border-radius: 5px;
 }
 </style>

@@ -51,8 +51,8 @@ export interface DotGridProps {
 const props = withDefaults(defineProps<DotGridProps>(), {
     dotSize: 16,
     gap: 32,
-    baseColor: '#27FF64',
-    activeColor: '#27FF64',
+    baseColor: '#04599C',
+    activeColor: '#04599C',
     proximity: 150,
     speedTrigger: 100,
     shockRadius: 250,

@@ -48,12 +48,12 @@ const products = ref([
             <span class="text-4xl font-bold uppercase text-center">Projects</span>
             <p class="font-light text-lg text-pretty mt-5">
                 Alguns dos principais projetos em que trabalhei e ainda trabalho hoje são comercializados, o sofpthone whitelabel pode ser baixado na
-                <a href="https://play.google.com/store/apps/dev?id=5756200202892972493" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl">Play Store</a> e
-                <a href="https://apps.apple.com/us/developer/amax-software-house-ltda/id1693262417" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl">App Store</a>. Check my work.
+                <a href="https://play.google.com/store/apps/dev?id=5756200202892972493" target="_blank" class="bg-[#04599C] p-2 rounded-xl">Play Store</a> e
+                <a href="https://apps.apple.com/us/developer/amax-software-house-ltda/id1693262417" target="_blank" class="bg-[#04599C] p-2 rounded-xl">App Store</a>. Check my work.
             </p>
         </div>
         <div class="lg:flex w-full lg:items-center lg:justify-around gap-20 mt-10">
-            <div class="imga w-full lg:w-1/2 p-5" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+            <div class="imga w-full lg:w-1/2 p-10 rounded-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <p class="font-light text-xl text-pretty text-center lg:text-left">Fluxphone</p>
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
@@ -85,9 +85,9 @@ const products = ref([
                 </p>
                 <div class="lg:flex gap-5">
                     <p class="font-light text-lg text-pretty">Avaliable on:</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://apps.apple.com/us/app/fluxphone/id6450217761" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">App Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase"><a href="https://apps.apple.com/us/app/fluxphone/id6450217761" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">App Store</a></p>
                     <p class="font-light text-lg text-pretty">&</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=br.net.flux.fluxphone_beta" target="_blank" class="bg-[#D3E97A] p-2 rounded-xl select-none">Play Store</a></p>
+                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=br.net.flux.fluxphone_beta" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">Play Store</a></p>
                 </div>
                 <p class="font-semibold text-lg text-pretty mt-5 uppercase">Project Info</p>
                 <Divider />
@@ -113,8 +113,6 @@ const products = ref([
 
 <style scoped>
 .imga {
-    padding: 10px;
     background-color: rgba(178, 178, 178, 0.111);
-    border-radius: 5px;
 }
 </style>

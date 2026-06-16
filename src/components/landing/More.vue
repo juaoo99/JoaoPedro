@@ -2,12 +2,12 @@
 import Carousel from 'primevue/carousel';
 import { ref } from 'vue';
 // Importe todas as imagens
+import bshop from '../../assets/images/bshop/pay.png';
 import habit from '../../assets/images/more/45.png';
 import brands from '../../assets/images/more/brands.jpeg';
 import google from '../../assets/images/more/gemini.jpeg';
 import office from '../../assets/images/more/office.jpeg';
 import totem2 from '../../assets/images/more/totem2.jpeg';
-
 const responsiveOptions = ref([
     {
         breakpoint: '1024px',
@@ -51,18 +51,24 @@ const products = ref([
         title: 'Fã de Tecnologia',
         subtitle:
             'A tecnologia, para mim, é uma jornada de constante descoberta e aprimoramento, e não apenas uma carreira. Impulsionado pela curiosidade, busco sempre aprender e explorar novas ferramentas para criar soluções digitais que sejam, ao mesmo tempo, intuitivas para o usuário e sólidas em sua execução técnica. É essa mentalidade de crescimento que me permite transformar ideias em realidade e estar preparado para os desafios do futuro.'
+    },
+        {
+        image: bshop,
+        title: 'Integração de pagamento com Tap on Phone',
+        subtitle:
+            'Desenvolvi a camada de integração do SDK do PagBank isolando a lógica de negócio das APIs proprietárias de hardware. Isso permitiu transformar qualquer dispositivo Android compatível em uma maquininha de cartão segura para pagamentos por aproximação (NFC).'
     }
 ]);
 </script>
 
 <template>
-    <div class="lg:px-40 px-10 gap-20 min-h-dvh">
+    <div class="lg:px-40 px-10 gap-20 h-1/2dvh">
         <div class="items-center lg:w-1/2 mb-20 justify-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
             <span class="text-4xl font-bold uppercase text-center">Journey</span>
             <p class="font-light text-lg text-pretty mt-5">A programação se tornou parte da minha vida, não so profissionalmente. Fora do escritório busco conhecimento, experiencia e inspiração.</p>
         </div>
         <div class="lg:flex-grow w-full h-auto lg:items-center lg:justify-around">
-            <div class="imga w-full" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+            <div class=" w-full p-10 roundend-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
                         <div class="lg:m-2 lg:p-4 lg:flex items-center justify-center gap-8">
@@ -88,8 +94,6 @@ const products = ref([
 
 <style scoped>
 .imga {
-    padding: 10px;
     background-color: rgba(128, 128, 128, 0.111);
-    border-radius: 5px;
 }
 </style>

@@ -62,9 +62,13 @@
                 <div class="px-4 py-2 rounded-xl flex justify-center bg-[#45ba852b]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-2000', leaveClass: 'animate-leave fade-out-0' }">
                     <p>Analytics</p>
                 </div>
+                  <div class="px-4 py-2 rounded-xl flex justify-center bg-[#40bef83a]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-r000 ', leaveClass: 'animate-leave fade-out-0' }">
+                    <p>Kotlin</p>
+                </div>
+                   <div class="px-4 py-2 rounded-xl flex justify-center bg-[#f0d92928]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-8 animate-duration-2000', leaveClass: 'animate-leave fade-out-0' }">
+                    <p>Android</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
-
-<style></style>

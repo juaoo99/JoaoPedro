@@ -40,7 +40,7 @@ function smoothScroll(id) {
         </div>
 
         <div class="flex items-center p-5 lg:p-0" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000' }">
-            <img src="../../assets/images/more/p2.png" alt="Image" width="400" class="rounded-xl" />
+            <img src="../../assets/images/more/p3.png" alt="Image" width="400" class="rounded-xl" />
         </div>
     </div>
     <div class="flex lg:hidden flex-col w-full min-h-dvh gap-5 mt-20">

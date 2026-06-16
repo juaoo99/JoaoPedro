@@ -3,6 +3,7 @@ import AboutMe from '@/components/landing/AboutMe.vue';
 import Exeperiencies from '@/components/landing/Exeperiencies.vue';
 import FirstProject from '@/components/landing/FirstProject.vue';
 import FirstSection from '@/components/landing/FirstSection.vue';
+import FourthProject from '@/components/landing/FouthProject.vue';
 import More from '@/components/landing/More.vue';
 import SecondProject from '@/components/landing/SecondProject.vue';
 import Skills from '@/components/landing/Skills.vue';
@@ -66,9 +67,9 @@ function smoothScroll(id) {
                     menu-button-color="#fff"
                     open-menu-button-color="#fff"
                     :change-menu-color-on-open="true"
-                    :colors="['#758A23FF', '#D3E97A']"
+                    :colors="['#04599C', '#04599C']"
                     logo-url="/path-to-your-logo.svg"
-                    accent-color="#D3E97A"
+                    accent-color="#04599C"
                     @menu-open="handleMenuOpen"
                     @menu-close="handleMenuClose"
                 />
@@ -78,7 +79,7 @@ function smoothScroll(id) {
                     :dot-size="3"
                     :gap="15"
                     base-color="#2C2C2CFF"
-                    active-color="#D3E97A"
+                    active-color="#04599C"
                     :proximity="150"
                     :speed-trigger="100"
                     :shock-radius="250"
@@ -120,28 +121,32 @@ function smoothScroll(id) {
                     <FirstSection />
                 </div>
             </div>-->
-
+             
             <div id="features" class="mt-40">
                 <FirstProject />
             </div>
-            <div id="s" class="mt-40">
+            <div id="f" class="mt-40">
+                <FourthProject />
+            </div>
+            <div id="s">
                 <SecondProject />
             </div>
 
-            <div id="t" class="mt-40">
+            <div id="t" >
                 <ThirdPtoject />
             </div>
             <div id="more" class="mt-40">
                 <More />
             </div>
-            <div id="aboutme" class="mt-40">
-                <AboutMe />
-            </div>
+            
             <div id="experiencies" class="mt-40">
                 <Exeperiencies />
             </div>
             <div id="capabilities" class="mt-40">
                 <Skills />
+            </div>
+            <div id="aboutme" class="mt-40">
+                <AboutMe />
             </div>
 
             <div id="connect" class="lg:my-60 my-40">

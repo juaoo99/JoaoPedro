@@ -1,3 +1,14 @@
+<script setup>
+import { computed } from 'vue';
+
+// Cria o caminho dinâmico correto combinando a URL base e o arquivo
+const cvPath = computed(() => {
+  const baseUrl = import.meta.env.BASE_URL;
+  // Garante que não vai duplicar a barra se a baseUrl terminar com /
+  return `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}joao_pedro_cv_ptbr.pdf`;
+});
+</script>
+
 <template>
     <div class="lg:px-20 px-10 lg:flex w-full lg:items-center lg:justify-around gap-5">
         <div class="items-center lg:w-1/3 justify-center pr-10" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
@@ -5,9 +16,14 @@
             <p class="font-light text-lg text-pretty mt-5">Entre em contato enviando uma um email para <a href="mailto:jpsshome@gmail.com" class="border-b border-[#D3E97A]">jpsshome@gmail.com</a>.</p>
             <GlassSurface :width="300" :height="50" :border-radius="24" style="custom-style">
                 <button class="flex items-center w-auto px-5 py-2 gap-3" style="border-radius: 50px">
-                    <i class="pi pi-file-pdf"></i>
-                    <p class="font-light text-lg text-pretty"><a href="../../assets/João Pedro Silva Santos.pdf" download>Confira meu currículo.</a></p>
-                </button>
+    <i class="pi pi-file-pdf"></i>
+    <p class="font-light text-lg text-pretty">
+      <!-- Mudamos o :href para chamar APENAS a constante cvPath, sem o 'import.meta' aqui -->
+      <a :href="cvPath" download="Joao_Pedro_CV.pdf" target="_blank">
+        Confira meu currículo.
+      </a>
+    </p>
+  </button>
             </GlassSurface>
 
             <div class="flex flex-wrap justify-start mt-6 gap-5">
