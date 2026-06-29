@@ -49,8 +49,8 @@ function smoothScroll(id) {
 </script>
 
 <template>
-    <div style="width: 100%; height: 600px; position: relative" class="mx-0 p-0">
-        <div id="home" class="landing-wrapper overflow-hidden absolute">
+    <div style="width: 100%; position: relative" class="mx-0 p-0">
+        <div id="home" class="landing-wrapper overflow-hidden absolute w-full">
             <div
                 :class="{
                     'pointer-events-auto': isMobileMenuOpen,
@@ -96,56 +96,31 @@ function smoothScroll(id) {
                     <FirstSection />
                 </div>
             </div>
-
-            <!--<div style="width: 100%; height: 100dvh" class="relative flex justify-center items-center">
-                <LiquidEther
-                    :colors="['#48FF28', '#A2FFC6', '#9EF19E']"
-                    :mouseForce="20"
-                    :cursorSize="100"
-                    :isViscous="false"
-                    :viscous="30"
-                    :iterationsViscous="32"
-                    :iterationsPoisson="32"
-                    :resolution="0.5"
-                    :isBounce="false"
-                    :autoDemo="true"
-                    :autoSpeed="0.5"
-                    :autoIntensity="2.2"
-                    :takeoverDuration="0.25"
-                    :autoResumeDelay="3000"
-                    :autoRampDuration="0.6"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"
-                />
-
-                <div id="first" class="relative z-10">
-                    <FirstSection />
-                </div>
-            </div>-->
              
-            <div id="features" class="mt-40">
+            <div id="features" class="mt-20 md:mt-40">
                 <FirstProject />
             </div>
-            <div id="f" class="mt-40">
+            <div id="f" class="mt-20 md:mt-40">
                 <FourthProject />
             </div>
-            <div id="s">
+            <div id="s" class="mt-20 md:mt-40">
                 <SecondProject />
             </div>
 
-            <div id="t" >
+            <div id="t" class="mt-20 md:mt-40">
                 <ThirdPtoject />
             </div>
-            <div id="more" class="mt-40">
+            <div id="more" class="mt-20 md:mt-40">
                 <More />
             </div>
             
-            <div id="experiencies" class="mt-40">
+            <div id="experiencies" class="mt-20 md:mt-40">
                 <Exeperiencies />
             </div>
-            <div id="capabilities" class="mt-40">
+            <div id="capabilities" class="mt-20 md:mt-40">
                 <Skills />
             </div>
-            <div id="aboutme" class="mt-40">
+            <div id="aboutme" class="mt-20 md:mt-40">
                 <AboutMe />
             </div>
 

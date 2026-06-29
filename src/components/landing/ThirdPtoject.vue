@@ -49,9 +49,9 @@ const responsiveOptions = ref([
 ]);
 </script>
 <template>
-    <div class="lg:px-40 px-10">
+    <div class="px-5 sm:px-10 lg:px-40">
         <div class="w-full">
-            <div class="items-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+            <div class="flex flex-col items-start" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <VariableProximity
                     label="GuestLink Management"
                     from-font-variation-settings="'wght' 400, 'opsz' 9"
@@ -59,40 +59,40 @@ const responsiveOptions = ref([
                     :container-ref="containerRef"
                     :radius="100"
                     falloff="linear"
-                    class-name="font-semibold text-4xl text-pretty mt-5"
+                    class-name="font-semibold text-2xl sm:text-3xl md:text-4xl text-pretty mt-5"
                 />
-                <p class="font-light text-lg text-pretty mt-5">
+                <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">
                     Complementando o aplicativo para iOS do Guestlink, desenvolvi um portal de gerenciamento web para a equipe do hotel. Essa plataforma é a central de operações que otimiza a comunicação e os serviços. Através dela, os funcionários
                     podem monitorar e responder ao chat dos hóspedes, gerenciar pedidos de serviço de forma organizada e configurar os ramais de forma simples e eficaz. O portal web, portanto, não apenas complementa o aplicativo, mas transforma a
                     gestão diária, fornecendo à equipe as ferramentas necessárias para oferecer um serviço excepcional.
                 </p>
-                <p class="font-semibold text-lg text-pretty mt-5 uppercase">Project Info</p>
+                <p class="font-semibold text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5 uppercase">Project Info</p>
                 <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Year</p>
-                    <p class="font-light text-lg text-pretty mt-5">2024 - 2025</p>
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Year</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">2024 - 2025</p>
                 </div>
                 <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Role</p>
-                    <p class="font-light text-lg text-pretty mt-5">Web Developer Full-Stack</p>
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Role</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Web Developer Full-Stack</p>
                 </div>
                 <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Langagues/Frameworks</p>
-                    <p class="font-light text-lg text-pretty mt-5 flex items-center gap-5">JavaScript <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> VUE <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Tailwind CSS</p>
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Langagues/Frameworks</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5 flex items-center gap-3 sm:gap-5">JavaScript <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> VUE <i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Tailwind CSS</p>
                 </div>
                 <Divider />
             </div>
 
-            <div class="imga w-full" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-light text-xl text-pretty text-center lg:text-left">GuestLink Management</p>
+            <div class="imga w-full p-5 sm:p-5" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+                <p class="font-light text-lg sm:text-xl text-pretty text-center lg:text-left">GuestLink Management</p>
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
-                        <div class="rounded m-2 p-4">
+                        <div class="rounded m-1 sm:m-2 p-2 sm:p-4">
                             <div>
                                 <div class="relative mx-auto">
-                                    <img :src="slotProps.data.image" alt="Project Image" class="w-full mx-auto lg:rounded-lg rounded-sm" />
+                                    <img :src="slotProps.data.image" alt="Project Image" class="w-full mx-auto lg:rounded-lg rounded-sm object-cover" loading="lazy" />
                                 </div>
                             </div>
                         </div>

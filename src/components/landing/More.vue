@@ -62,26 +62,26 @@ const products = ref([
 </script>
 
 <template>
-    <div class="lg:px-40 px-10 gap-20 h-1/2dvh">
-        <div class="items-center lg:w-1/2 mb-20 justify-center" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-            <span class="text-4xl font-bold uppercase text-center">Journey</span>
-            <p class="font-light text-lg text-pretty mt-5">A programação se tornou parte da minha vida, não so profissionalmente. Fora do escritório busco conhecimento, experiencia e inspiração.</p>
+    <div class="px-5 sm:px-10 lg:px-40 gap-5 lg:gap-20 min-h-dvh flex flex-col">
+        <div class="flex flex-col items-center justify-center mb-10 lg:mb-20" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-b-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+            <span class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">Journey</span>
+            <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5 max-w-2xl text-center">A programação se tornou parte da minha vida, não so profissionalmente. Fora do escritório busco conhecimento, experiencia e inspiração.</p>
         </div>
-        <div class="lg:flex-grow w-full h-auto lg:items-center lg:justify-around">
-            <div class=" w-full p-10 roundend-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+        <div class="flex-grow w-full h-auto">
+            <div class="w-full p-5 sm:p-10 rounded-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
-                        <div class="lg:m-2 lg:p-4 lg:flex items-center justify-center gap-8">
-                            <div class="">
+                        <div class="m-1 sm:m-2 p-2 sm:p-4 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8">
+                            <div class="w-full sm:w-auto flex-shrink-0">
                                 <div class="relative mx-auto">
-                                    <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-auto max-w-xs mx-auto rounded-lg" />
+                                    <img :src="slotProps.data.image" :alt="slotProps.data.title" class="w-full h-auto max-w-xs sm:max-w-sm rounded-lg object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div class="lg:w-1/2 h-auto">
-                                <p class="text-xl">{{ slotProps.data.title }}</p>
-                                <div class="flex">
-                                    <p class="font-light text-lg text-pretty mt-5">{{ slotProps.data.subtitle }}</p>
-                                    <p class="font-light text-lg text-pretty mt-5">{{ slotProps.data.subtitle2 }}</p>
+                            <div class="w-full lg:w-1/2 h-auto flex flex-col justify-start">
+                                <p class="text-lg sm:text-xl font-semibold">{{ slotProps.data.title }}</p>
+                                <div class="flex flex-col">
+                                    <p class="font-light text-xs sm:text-sm md:text-base text-pretty mt-2 sm:mt-5">{{ slotProps.data.subtitle }}</p>
+                                    <p class="font-light text-xs sm:text-sm md:text-base text-pretty mt-2 sm:mt-5">{{ slotProps.data.subtitle2 }}</p>
                                 </div>
                             </div>
                         </div>

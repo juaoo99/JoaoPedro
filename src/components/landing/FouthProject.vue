@@ -46,16 +46,16 @@ const products = ref([
 ]);
 </script>
 <template>
-    <div class="lg:px-20 px-10 gap-20 min-h-dvh">
-        <div class="lg:flex w-full lg:items-center lg:justify-around gap-20 mt-10">
-            <div class="imga p-10 w-full lg:w-1/2 rounded-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
-                <p class="font-light text-xl text-pretty text-center lg:text-left">BShop Mobile</p>
+    <div class="px-5 sm:px-10 lg:px-20 gap-5 lg:gap-20 min-h-dvh flex flex-col">
+        <div class="flex flex-col lg:flex-row w-full lg:items-center lg:justify-around gap-5 lg:gap-20 mt-5 lg:mt-10">
+            <div class="imga p-5 sm:p-10 w-full lg:w-1/2 rounded-lg" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-l-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+                <p class="font-light text-lg sm:text-xl text-pretty text-center lg:text-left">BShop Mobile</p>
                 <Carousel :value="products" circular :autoplayInterval="5000" :showIndicators="false" :showNavigators="true" :responsiveOptions="responsiveOptions">
                     <template #item="slotProps">
-                        <div class="rounded m-2 p-4">
+                        <div class="rounded m-1 sm:m-2 p-2 sm:p-4">
                             <div class="mb-4">
                                 <div class="relative mx-auto">
-                                    <img :src="slotProps.data.image" alt="Project Image" class="w-full h-auto max-w-xs mx-auto lg:rounded-lg rounded-sm" />
+                                    <img :src="slotProps.data.image" alt="Project Image" class="w-full h-auto max-w-xs mx-auto lg:rounded-lg rounded-sm object-cover" loading="lazy" />
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ const products = ref([
                 </Carousel>
             </div>
 
-            <div class="items-center lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
+            <div class="flex flex-col items-start lg:w-1/2" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-r-8 animate-duration-1000', leaveClass: 'animate-leave fade-out-0' }">
                 <VariableProximity
                     label="BShop Mobile"
                     from-font-variation-settings="'wght' 400, 'opsz' 9"
@@ -71,32 +71,32 @@ const products = ref([
                     :container-ref="containerRef"
                     :radius="100"
                     falloff="linear"
-                    class-name="font-semibold text-4xl text-pretty mt-5"
+                    class-name="font-semibold text-2xl sm:text-3xl md:text-4xl text-pretty mt-5"
                 />
-                <p class="font-light text-lg text-pretty mt-5">
+                <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">
                    O BShop Mobile é um ecossistema robusto de Ponto de Venda (PDV) e softphone focado no setor varejista e de automação comercial. A plataforma unifica serviços de telecomunicação e soluções financeiras, otimizando a operação e o fluxo de vendas diretamente em smartphones comuns e terminais dedicados (Smart POS). O sistema foi projetado com arquitetura escalável utilizando múltiplos build variants (flavors) para gerenciar com segurança uma carteira de clientes ativos.
                    <br />
                    Como Desenvolvedor Android na Server Informática, atuei diretamente em todo o ciclo de vida do aplicativo, com foco em otimização de código e integração de hardware. Meu principal marco no projeto foi liderar de ponta a ponta a integração do SDK 'Tap on Phone' do PagBank.
                 </p>
-                <div class="lg:flex gap-5">
-                    <p class="font-light text-lg text-pretty uppercase">Avaliable on:</p>
-                    <p class="font-light text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=com.serverinfo.bshoppdv.playstore&hl=pt" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">Play Store</a></p>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-5 flex-wrap mt-3 sm:mt-5">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty uppercase">Avaliable on:</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty uppercase"><a href="https://play.google.com/store/apps/details?id=com.serverinfo.bshoppdv.playstore&hl=pt" target="_blank" class="bg-[#04599C] p-2 rounded-xl select-none">Play Store</a></p>
                 </div>
-                <p class="font-light text-lg text-pretty mt-5 uppercase">Project Info</p>
+                <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5 uppercase">Project Info</p>
                 <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Year</p>
-                    <p class="font-light text-lg text-pretty mt-5">2026</p>
-                </div>
-                <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Role</p>
-                    <p class="font-light text-lg text-pretty mt-5">Mobile Developer Full-Stack</p>
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Year</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">2026</p>
                 </div>
                 <Divider />
-                <div class="lg:flex justify-between">
-                    <p class="font-light text-lg text-pretty mt-5">Langagues/Frameworks</p>
-                    <p class="font-light text-lg text-pretty mt-5 flex items-center gap-5">Kotlin<i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Java 
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Role</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Mobile Developer Full-Stack</p>
+                </div>
+                <Divider />
+                <div class="flex flex-col sm:flex-row sm:justify-between w-full gap-2">
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5">Langagues/Frameworks</p>
+                    <p class="font-light text-sm sm:text-base md:text-lg text-pretty mt-3 sm:mt-5 flex items-center gap-3 sm:gap-5">Kotlin<i class="pi pi-circle-fill" style="font-size: 0.5rem"></i> Java 
                     </p>
                 </div>
                 <Divider />
