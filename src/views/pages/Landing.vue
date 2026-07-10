@@ -49,8 +49,8 @@ function smoothScroll(id) {
 </script>
 
 <template>
-    <div style="width: 100%; position: relative" class="mx-0 p-0">
-        <div id="home" class="landing-wrapper overflow-hidden absolute w-full">
+    <div class="w-full overflow-x-hidden">
+        <div id="home" class="landing-wrapper relative w-full overflow-x-hidden">
             <div
                 :class="{
                     'pointer-events-auto': isMobileMenuOpen,
@@ -74,7 +74,8 @@ function smoothScroll(id) {
                     @menu-close="handleMenuClose"
                 />
             </div>
-            <div style="width: 100%; height: 100dvh" class="relative flex justify-center items-center">
+
+            <section class="relative flex min-h-[100dvh] w-full items-center justify-center px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
                 <DotGrid
                     :dot-size="3"
                     :gap="15"
@@ -92,41 +93,59 @@ function smoothScroll(id) {
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0"
                 />
 
-                <div id="first" class="relative z-10">
+                <div id="first" class="relative z-10 mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
                     <FirstSection />
                 </div>
-            </div>
-             
-            <div id="features" class="mt-20 md:mt-40">
-                <FirstProject />
-            </div>
-            <div id="f" class="mt-20 md:mt-40">
-                <FourthProject />
-            </div>
-            <div id="s" class="mt-20 md:mt-40">
-                <SecondProject />
-            </div>
+            </section>
 
-            <div id="t" class="mt-20 md:mt-40">
-                <ThirdPtoject />
-            </div>
-            <div id="more" class="mt-20 md:mt-40">
-                <More />
-            </div>
-            
-            <div id="experiencies" class="mt-20 md:mt-40">
-                <Exeperiencies />
-            </div>
-            <div id="capabilities" class="mt-20 md:mt-40">
-                <Skills />
-            </div>
-            <div id="aboutme" class="mt-20 md:mt-40">
-                <AboutMe />
-            </div>
+            <section id="features" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <FirstProject />
+                </div>
+            </section>
+            <section id="f" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <FourthProject />
+                </div>
+            </section>
+            <section id="s" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <SecondProject />
+                </div>
+            </section>
 
-            <div id="connect" class="lg:my-60 my-40">
-                <Connect />
-            </div>
+            <section id="t" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <ThirdPtoject />
+                </div>
+            </section>
+            <section id="more" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <More />
+                </div>
+            </section>
+
+            <section id="experiencies" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <Exeperiencies />
+                </div>
+            </section>
+            <section id="capabilities" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <Skills />
+                </div>
+            </section>
+            <section id="aboutme" class="mt-20 px-4 sm:px-6 md:mt-32 lg:mt-40 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <AboutMe />
+                </div>
+            </section>
+
+            <section id="connect" class="my-20 px-4 sm:px-6 md:my-32 lg:my-60 lg:px-8 xl:px-10 2xl:px-12">
+                <div class="mx-auto w-full max-w-[1500px] xl:max-w-[1600px] 2xl:max-w-[1700px]">
+                    <Connect />
+                </div>
+            </section>
         </div>
     </div>
 </template>

@@ -14,8 +14,8 @@ function smoothScroll(id) {
 }
 </script>
 <template>
-    <div class="hidden lg:flex flex-col lg:flex-row w-full min-h-dvh lg:items-center lg:justify-around gap-5 mt-20 !bg-transparent">
-        <div class="w-full text-center lg:w-1/2 lg:text-left" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-2000' }">
+    <div class="hidden lg:flex flex-col lg:flex-row w-full min-h-dvh lg:items-center lg:justify-between gap-8 xl:gap-12 mt-20 !bg-transparent">
+        <div class="w-full text-center lg:w-[46%] xl:w-[48%] lg:text-left" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-2000' }">
             <TextType style="font-size: clamp(2rem, 8vw, 6rem); color: surface" :text="['hi, i am Joao Pedro', 'happy to see you here!']" :typingSpeed="75" :pauseDuration="2000" :showCursor="true" cursorCharacter="|" />
             <ShinyText
                 text=" Sou desenvolvedor formado e com experiência tem aplicações mobile e web. Buscando oportunidades desafiadoras para aplicar minhas skills em programação e desenvolvimento de aplicações de alta performance!"
@@ -39,8 +39,8 @@ function smoothScroll(id) {
             </div>
         </div>
 
-        <div class="flex items-center justify-center p-5 lg:p-0" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000' }">
-            <img src="../../assets/images/more/p3.png" alt="Image" class="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-xl object-cover" />
+        <div class="flex items-center justify-center p-5 lg:p-0 lg:w-[50%] xl:w-[46%]" v-animateonscroll="{ enterClass: 'animate-enter fade-in-10 slide-in-from-t-20 animate-duration-1000' }">
+            <img src="../../assets/images/more/p3.png" alt="Image" class="w-full max-w-sm md:max-w-md lg:max-w-[32rem] xl:max-w-[36rem] rounded-xl object-cover" />
         </div>
     </div>
     <div class="flex lg:hidden flex-col w-full gap-5 mt-10 px-4 sm:px-6">
